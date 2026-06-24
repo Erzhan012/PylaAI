@@ -147,7 +147,7 @@ def _postprocess_raw(raw_output, conf_tresh=0.6, iou_thresh=0.6):
 
 
 class Detect:
-    def __init__(self, model_path, ignore_classes=None, classes=None, input_size=(640, 640)):
+    def __init__(self, model_path, ignore_classes=None, classes=None, input_size=(320, 320)):
         threads_to_use = load_toml_as_dict("cfg/general_config.toml")['used_threads']
 
         def get_optimal_threads(max_limit=6):
